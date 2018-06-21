@@ -1,22 +1,49 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>俄羅斯方塊</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DogeCube</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="game" id="game"></div>
-    <div class="next" id="next"></div>
-    <div class="info">
-      <div>已用時: <span id="time">0</span>s</div>  
-      <div>已得分: <span id="score">0</span>分</div>  
+    <div class="wrapper">
+        <h3>俄羅斯方塊</h3>
+        <div class="game" id="game"></div>
+        <div id="others">
+            <div class="next" id="next"></div>
+            <div class="info">
+                <div>計時<span id="time">0</span> s</div>
+                <div>得分<span id="score">0</span> 分</div>
+                <div id="gameOver"></div>
+            </div>
+        </div>
+        <div id="click">
+            <div id="newGame">NEW</div>
+            <div id="up">U</div>
+            <div id="left">L</div>
+            <div id="right">R</div>
+            <div id="down">D</div>
+            <div id="fall">FALL</div>
+        </div>
+        <ul>
+
+        <li style="color:red">若當前分數超過300分，並且層數低於五層，將掉落特殊方塊；<br/>若當前高於15層時，將掉落完美方塊。<br/></li>
+
+            
+        </ul>
     </div>
-    <script src="js/square.js"></script>
-    <script src="js/squareFactory.js"></script>
+
+    <script src="js/superSquare.js"></script>
     <script src="js/game.js"></script>
     <script src="js/local.js"></script>
     <script src="js/remote.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/square.js"></script>
+    <script src="js/squareFactory.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
